@@ -11,16 +11,20 @@ if (
 }
 
 pacman::p_load(
-    tidyverse, sf,
-    anyflights, igraph,
-    tidygraph, ggraph
+    svglite,
+    tidyverse, 
+    sf,
+    anyflights, 
+    igraph,
+    tidygraph, 
+    ggraph
 )
 
 sf::sf_use_s2(FALSE)
 
 # 2. US STATES
 
-us_states <- map_data("states")
+us_states <- map_data("state")
 
 us_states_sf <- sf::st_as_sf(
     us_states,
@@ -142,9 +146,9 @@ coord_sf(crs = sf::st_crs(us_states_sf)) +
 theme_void()
 
 ggsave(
-    filename = "us-flight-routes.png",
+    filename = "us-flight-routes.svg",
     width = 7.5,
     height = 7,
-    background = "white",
+    bg = "white",
     map
 )
