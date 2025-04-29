@@ -17,7 +17,8 @@ pacman::p_load(
     anyflights, 
     igraph,
     tidygraph, 
-    ggraph
+    ggraph,
+    maps
 )
 
 sf::sf_use_s2(FALSE)
