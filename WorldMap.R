@@ -42,7 +42,7 @@ head(world$continent)
 
 world_map <- ggplot() +
   geom_sf(data = world_robinson, aes(fill = continent), color = "white", size = 0.1) +
-  scale_fill_viridis_d(option = "C", name = "Continent") +
+  scale_fill_viridis_d(option = "E", name = "Continent") +
   theme_void() +
   labs(title = "World Map by Continent")
 
@@ -58,3 +58,4 @@ ggsave(
   height = 6,
   bg = "white"
 )
+
