@@ -59,3 +59,15 @@ ggsave(
   bg = "white"
 )
 
+# Plotting Centroids ----
+
+country_centroids <- world_robinson %>%
+  st_drop_geometry() %>%
+  select(name, centroid_x, centroid_y) %>%
+  st_as_sf(coords = c("centroid_x", "centroid_y"),
+           crs = st_crs(world_robinson),
+           remove = FALSE)
+
+plot(st_geometry(world_robinson), col = "grey80", border = "white")
+plot(st_geometry(country_centroids), col = "red", pch = 20, add = TRUE)
+
