@@ -35,7 +35,7 @@ centroids_df <- centroids_robinson %>%
 # ------------------------------------------------------------
 # 2.  READ & PREPARE ALLUVIAL DATA  ---------------------------
 # ------------------------------------------------------------
-flows_raw <- readr::read_csv("C:/R Projects/save-the-birds/CITES/cites_original_alluvial 2025-03-29 .csv",
+flows_raw <- readr::read_csv("cites_original_alluvial 2025-03-29 .csv",
                              show_col_types = FALSE)
 
 # Clean and select key columns
